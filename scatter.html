@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scatter</title>
+    <style type="text/css">
+      .tooltip{
+       font-family: simsun;
+       font-size: 14px;
+       width: 120;
+       height: auto;
+       position: absolute;
+       text-align: center;
+         border-style: solid; 
+       border-width: 1px;
+       background-color: white;
+       border-radius: 5px;
+      }
+    </style>
+    <style type="text/css">
+      text { font: 10px sans-serif;}
+      .dot { stroke: #000;}
+      .label { fill: #777;}
+      .month.label {
+        font: 500 196px "Helvetica Neue";
+        fill: #ddd;
+      }
+      .month.label.active { fill: #aaa;}
+      .overlay {
+        fill: none;
+        pointer-events: all;
+        cursor: ew-resize;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Shipping Cost and Profit of Markets</h1>
+    
+    <p id="chart_area"></p>
+    <input type="checkbox" name="Market" class="market_cb" value="Africa" checked="checked"> Africa<br>
+    <input type="checkbox" name="Market" class="market_cb" value="APAC" checked="checked"> APAC<br>
+    <input type="checkbox" name="Market" class="market_cb" value="Canada" checked="checked"> Canada<br>
+    <input type="checkbox" name="Market" class="market_cb" value="EMEA" checked="checked"> EMEA<br>
+    <input type="checkbox" name="Market" class="market_cb" value="EU" checked="checked"> EU<br>
+    <input type="checkbox" name="Market" class="market_cb" value="LATAM" checked="checked"> LATAM<br>
+    <input type="checkbox" name="Market" class="market_cb" value="US" checked="checked"> US<br>
+
+    <input type="range" name="range" class="slider" id="month_slider"
+           value="7" min="0" max="47" step="1" ><br>
+
+    <script src="js/d3.min.js"></script>
+    <script src="js/scatter.js"></script>
+  </body>
+</html>
